@@ -19,6 +19,10 @@ app.use(cors());
 app.use(express.json());
 // app.use(morgan("tiny"));
 
+app.get("/", (req,res) =>{
+  res.send("hello user");
+})
+
 //Routes of application
 app.use("/clg/students", studentRouter);
 app.use("/admin/auth", adminRouter);
